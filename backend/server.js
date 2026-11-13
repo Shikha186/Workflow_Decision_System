@@ -12,6 +12,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json()); // For accepting structured JSON requests
+app.use('/api/workflows', require('./routes/workflowRoutes'));
 
 // Health check route
 app.get('/api/health', (req, res) => {
